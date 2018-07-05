@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Keypad : MonoBehaviour
 {
-
     public string curPassword = "123";
     private string input;
     private bool doorOpen;
@@ -13,7 +12,7 @@ public class Keypad : MonoBehaviour
 
     void Start()
     {
-        firstPersonCamera = GetComponent<FirstPersonCamera>();
+        firstPersonCamera = GameObject.Find("Main Camera").GetComponent<FirstPersonCamera>();
         doorOpen = false;
         Reset();
     }
