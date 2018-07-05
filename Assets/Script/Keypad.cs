@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Keypad : MonoBehaviour
 {
-    public string curPassword = "123";
     private string input;
     private bool doorOpen;
     private bool keypadScreen;
@@ -14,7 +13,8 @@ public class Keypad : MonoBehaviour
     {
         firstPersonCamera = GameObject.Find("Main Camera").GetComponent<FirstPersonCamera>();
         doorOpen = false;
-        Reset();
+        keypadScreen = false;
+        input = "";
     }
 
     void OnGUI()
@@ -85,7 +85,7 @@ public class Keypad : MonoBehaviour
 
                 if (GUI.Button(new Rect(215, 350, 100, 100), "Submit"))
                 {
-                    if (input == curPassword)
+                    if (Password.CheckPassword(input))
                     {
                         doorOpen = true;
                         if (door != null)

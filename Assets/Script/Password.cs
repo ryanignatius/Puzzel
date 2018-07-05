@@ -1,48 +1,62 @@
 ﻿using UnityEngine;
 using System.Collections;
+using TMPro;
 
 
-namespace TMPro.Examples
+public class Password : MonoBehaviour
 {
+    private static string PASSWORD = "123";
+    private static string HINT = "123";
 
-    public class Password : MonoBehaviour
+    public static void SetPasswordWithHint(string newPassword, string newHint)
     {
+        PASSWORD = newPassword;
+        HINT = newHint;
+    }
 
-        private TextMeshPro m_textMeshPro;
+    public static bool CheckPassword(string pass)
+    {
+        return PASSWORD == pass;
+    }
 
-        private const string label = "Password: 123";
+    private TextMeshPro m_textMeshPro;
+    private const string label = "Password:\n";
 
-        void Start()
-        {
-            // Add new TextMesh Pro Component
-            m_textMeshPro = gameObject.AddComponent<TextMeshPro>();
+    void Start()
+    {
+        // Add new TextMesh Pro Component
+        m_textMeshPro = gameObject.AddComponent<TextMeshPro>();
 
-            m_textMeshPro.autoSizeTextContainer = true;
+        m_textMeshPro.autoSizeTextContainer = true;
 
-            // Load the Font Asset to be used.
-            //m_FontAsset = Resources.Load("Fonts & Materials/LiberationSans SDF", typeof(TMP_FontAsset)) as TMP_FontAsset;
-            //m_textMeshPro.font = m_FontAsset;
+        // Load the Font Asset to be used.
+        //m_FontAsset = Resources.Load("Fonts & Materials/LiberationSans SDF", typeof(TMP_FontAsset)) as TMP_FontAsset;
+        //m_textMeshPro.font = m_FontAsset;
 
-            // Assign Material to TextMesh Pro Component
-            //m_textMeshPro.fontSharedMaterial = Resources.Load("Fonts & Materials/LiberationSans SDF - Bevel", typeof(Material)) as Material;
-            //m_textMeshPro.fontSharedMaterial.EnableKeyword("BEVEL_ON");
+        // Assign Material to TextMesh Pro Component
+        //m_textMeshPro.fontSharedMaterial = Resources.Load("Fonts & Materials/LiberationSans SDF - Bevel", typeof(Material)) as Material;
+        //m_textMeshPro.fontSharedMaterial.EnableKeyword("BEVEL_ON");
 
-            // Set various font settings.
-            m_textMeshPro.fontSize = 10;
+        // Set various font settings.
+        m_textMeshPro.fontSize = 10;
 
-            m_textMeshPro.alignment = TextAlignmentOptions.Center;
+        m_textMeshPro.alignment = TextAlignmentOptions.Center;
 
-            //m_textMeshPro.anchorDampening = true; // Has been deprecated but under consideration for re-implementation.
-            //m_textMeshPro.enableAutoSizing = true;
+        //m_textMeshPro.anchorDampening = true; // Has been deprecated but under consideration for re-implementation.
+        //m_textMeshPro.enableAutoSizing = true;
 
-            //m_textMeshPro.characterSpacing = 0.2f;
-            //m_textMeshPro.wordSpacing = 0.1f;
+        //m_textMeshPro.characterSpacing = 0.2f;
+        //m_textMeshPro.wordSpacing = 0.1f;
 
-            //m_textMeshPro.enableCulling = true;
-            m_textMeshPro.enableWordWrapping = false;
+        //m_textMeshPro.enableCulling = true;
+        m_textMeshPro.enableWordWrapping = false;
 
-            //textMeshPro.fontColor = new Color32(255, 255, 255, 255);
-            m_textMeshPro.SetText(label);
-        }
+        //textMeshPro.fontColor = new Color32(255, 255, 255, 255);
+        m_textMeshPro.SetText("");
+    }
+
+    public void ShowPassword()
+    {
+        m_textMeshPro.SetText(label + HINT);
     }
 }
