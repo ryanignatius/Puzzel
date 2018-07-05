@@ -2,7 +2,6 @@
 using System.Collections;
 using TMPro;
 
-
 public class Password : MonoBehaviour
 {
     private static string PASSWORD = "123";
@@ -20,17 +19,25 @@ public class Password : MonoBehaviour
     }
 
     private TextMeshPro m_textMeshPro;
+    private TMP_FontAsset m_FontAsset;
     private const string label = "Password:\n";
+    private Camera passwordCamera;
 
     void Start()
     {
+        passwordCamera = transform.parent.GetComponent<Camera>();
+        if (passwordCamera != null)
+        {
+            passwordCamera.enabled = false;
+        }
+
         // Add new TextMesh Pro Component
         m_textMeshPro = gameObject.AddComponent<TextMeshPro>();
 
         m_textMeshPro.autoSizeTextContainer = true;
 
         // Load the Font Asset to be used.
-        //m_FontAsset = Resources.Load("Fonts & Materials/LiberationSans SDF", typeof(TMP_FontAsset)) as TMP_FontAsset;
+        //m_FontAsset = Resources.Load("Fonts & Materials/Electronic Highway Sign SDF", typeof(TMP_FontAsset)) as TMP_FontAsset;
         //m_textMeshPro.font = m_FontAsset;
 
         // Assign Material to TextMesh Pro Component
@@ -38,7 +45,7 @@ public class Password : MonoBehaviour
         //m_textMeshPro.fontSharedMaterial.EnableKeyword("BEVEL_ON");
 
         // Set various font settings.
-        m_textMeshPro.fontSize = 10;
+        m_textMeshPro.fontSize = 8;
 
         m_textMeshPro.alignment = TextAlignmentOptions.Center;
 
@@ -55,8 +62,32 @@ public class Password : MonoBehaviour
         m_textMeshPro.SetText("");
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            if (passwordCamera != null)
+            {
+                passwordCamera.enabled = !passwordCamera.enabled;
+            }
+        }
+    }
+
     public void ShowPassword()
     {
         m_textMeshPro.SetText(label + HINT);
+    }
+
+    public void SetNormalFont()
+    {
+        m_FontAsset = Resources.Load("Fonts & Materials/Bangers SDF", typeof(TMP_FontAsset)) as TMP_FontAsset;
+        m_textMeshPro.font = m_FontAsset;
+    }
+
+    public void SetMonospaceFont()
+    {
+        m_textMeshPro.fontSize = 6;
+        m_FontAsset = Resources.Load("Fonts & Materials/Electronic Highway Sign SDF", typeof(TMP_FontAsset)) as TMP_FontAsset;
+        m_textMeshPro.font = m_FontAsset;
     }
 }
