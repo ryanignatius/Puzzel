@@ -317,8 +317,9 @@ GameObject:
   m_Component:
   - component: {fileID: 107353093}
   - component: {fileID: 107353094}
+  - component: {fileID: 107353095}
   m_Layer: 0
-  m_Name: Spot Light
+  m_Name: Spot Light Wide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -373,6 +374,17 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &107353095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 107353092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e75aba2067570479bbb6761080b599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &128585080
 Prefab:
   m_ObjectHideFlags: 0
@@ -1918,8 +1930,9 @@ GameObject:
   m_Component:
   - component: {fileID: 879017922}
   - component: {fileID: 879017923}
+  - component: {fileID: 879017924}
   m_Layer: 0
-  m_Name: Spot Light
+  m_Name: Spot Light Focus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1974,6 +1987,17 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &879017924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 879017921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e75aba2067570479bbb6761080b599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &888168120
 Prefab:
   m_ObjectHideFlags: 0
@@ -2113,8 +2137,9 @@ GameObject:
   m_Component:
   - component: {fileID: 934911481}
   - component: {fileID: 934911482}
+  - component: {fileID: 934911483}
   m_Layer: 0
-  m_Name: Spot Light (1)
+  m_Name: Spot Light Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2169,6 +2194,17 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &934911483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 934911480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e75aba2067570479bbb6761080b599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &937778843 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
