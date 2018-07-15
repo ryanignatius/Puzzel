@@ -14,6 +14,9 @@ public abstract class Interactable : MonoBehaviour {
     protected Vector3 target;
     protected float zoomLevel;
 
+    protected static GameObject terminalObject;
+    protected static Terminal terminal;
+
     protected virtual void Start()
     {
         isStartInteract = false;
@@ -21,6 +24,15 @@ public abstract class Interactable : MonoBehaviour {
         target = transform.position;
         zoomLevel = 30;
         cam = GameObject.Find("Main Camera").GetComponent<FirstPersonCamera>();
+        if (terminalObject == null)
+        {
+            terminalObject = GameObject.Find("Terminal");
+            if (terminalObject != null)
+            {
+                terminal = terminalObject.GetComponentInChildren<Terminal>();
+                terminalObject.SetActive(false);
+            }
+        }
     }
 
     protected virtual void Update()
@@ -56,6 +68,7 @@ public abstract class Interactable : MonoBehaviour {
         if (isInteract)
         {
             isInteract = false;
+            CloseTerminal();
             if (useZoom)
             {
                 float t = cam.CancelZoom();
@@ -71,10 +84,30 @@ public abstract class Interactable : MonoBehaviour {
     protected virtual void AfterInteract()
     {
         isInteract = true;
+        OpenTerminal();
     }
 
     protected virtual void AfterCancelInteract()
     {
         isStartInteract = false;
+    }
+
+    private void OpenTerminal()
+    {
+        Debug.Log("open terminal");
+        if (terminalObject != null)
+        {
+            Debug.Log("open terminal not null");
+            terminalObject.SetActive(true);
+            terminal.ShowTerminal("test open terminal");
+        }
+    }
+
+    private void CloseTerminal()
+    {
+        if (terminalObject != null)
+        {
+            terminalObject.SetActive(false);
+        }
     }
 }
