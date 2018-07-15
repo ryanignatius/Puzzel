@@ -9,15 +9,28 @@ public class DoorInteractable : Interactable {
     private Keypad keypad;
     private Collider doorCollider;
 
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         keypad = GetComponent<Keypad>();
         doorCollider = GetComponent<Collider>();
+        target = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
     }
 
-    public override void Interact()
+    protected override void Update()
     {
-        // open keypad
+        base.Update();
+    }
+
+    protected override void AfterInteract()
+    {
+        base.AfterInteract();
         keypad.Show(doorCollider);
+    }
+
+    protected override void AfterCancelInteract()
+    {
+        base.AfterCancelInteract();
+        keypad.Reset();
     }
 }
