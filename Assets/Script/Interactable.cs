@@ -6,13 +6,15 @@ using UnityEngine;
 public abstract class Interactable : MonoBehaviour {
 
     public bool useZoom = true;
+    public float height = 0.25f;
+    public string message = "";
+    public float zoomLevel = 30;
 
     protected FirstPersonCamera cam;
 
     protected bool isStartInteract;
     protected bool isInteract;
     protected Vector3 target;
-    protected float zoomLevel;
 
     protected static GameObject terminalObject;
     protected static Terminal terminal;
@@ -21,8 +23,7 @@ public abstract class Interactable : MonoBehaviour {
     {
         isStartInteract = false;
         isInteract = false;
-        target = transform.position;
-        zoomLevel = 30;
+        target = new Vector3(transform.position.x, transform.position.y + height, transform.position.z);
         cam = GameObject.Find("Main Camera").GetComponent<FirstPersonCamera>();
         if (terminalObject == null)
         {
@@ -99,7 +100,7 @@ public abstract class Interactable : MonoBehaviour {
         {
             Debug.Log("open terminal not null");
             terminalObject.SetActive(true);
-            terminal.ShowTerminal("test open terminal");
+            terminal.ShowTerminal(message);
         }
     }
 

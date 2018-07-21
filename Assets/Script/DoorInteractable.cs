@@ -14,7 +14,6 @@ public class DoorInteractable : Interactable {
         base.Start();
         keypad = GetComponent<Keypad>();
         doorCollider = GetComponent<Collider>();
-        target = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
     }
 
     protected override void Update()
