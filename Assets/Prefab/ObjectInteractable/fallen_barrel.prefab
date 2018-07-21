@@ -9,47 +9,47 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1745436708038710}
+  m_RootGameObject: {fileID: 1836967398529152}
   m_IsPrefabParent: 1
---- !u!1 &1745436708038710
+--- !u!1 &1836967398529152
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4274237174605764}
-  - component: {fileID: 33054469301120524}
-  - component: {fileID: 23580466491994630}
-  - component: {fileID: 136024282401223138}
-  - component: {fileID: 114805547368231776}
-  - component: {fileID: 114044799566159580}
+  - component: {fileID: 4090977175948012}
+  - component: {fileID: 33404271028742246}
+  - component: {fileID: 23265429448464978}
+  - component: {fileID: 136984146227089546}
+  - component: {fileID: 114104543937312328}
+  - component: {fileID: 114270078060444640}
   m_Layer: 0
-  m_Name: barrel
+  m_Name: fallen_barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4274237174605764
+--- !u!4 &4090977175948012
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1745436708038710}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 1836967398529152}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.70710677}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23580466491994630
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90.00001}
+--- !u!23 &23265429448464978
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1745436708038710}
+  m_GameObject: {fileID: 1836967398529152}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -78,32 +78,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33054469301120524
+--- !u!33 &33404271028742246
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1745436708038710}
+  m_GameObject: {fileID: 1836967398529152}
   m_Mesh: {fileID: 4300004, guid: d5ebfcb780598a54b830d1afcc9c9103, type: 3}
---- !u!114 &114044799566159580
+--- !u!114 &114104543937312328
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1745436708038710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f33a420829fad249b59aee86497d176, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  height: 0.773
-  offset: 0
---- !u!114 &114805547368231776
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1745436708038710}
+  m_GameObject: {fileID: 1836967398529152}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ffe070e346fefbd40a7dd958c7e861bd, type: 3}
@@ -113,12 +100,25 @@ MonoBehaviour:
   height: 0.25
   message: Barrel..
   zoomLevel: 20
---- !u!136 &136024282401223138
+--- !u!114 &114270078060444640
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1836967398529152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f33a420829fad249b59aee86497d176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  height: 0
+  offset: 0.3238167
+--- !u!136 &136984146227089546
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1745436708038710}
+  m_GameObject: {fileID: 1836967398529152}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1

@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23388285960518804}
   - component: {fileID: 65543642275642968}
   - component: {fileID: 114030904956320992}
+  - component: {fileID: 114646462424114484}
   m_Layer: 0
   m_Name: table
   m_TagString: Untagged
@@ -36,13 +37,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1450718105596570}
-  m_LocalRotation: {x: -0, y: 0.21570551, z: -0, w: 0.9764585}
-  m_LocalPosition: {x: 8.749, y: 0, z: 18.631}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 24.914001, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23388285960518804
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -111,3 +112,18 @@ MonoBehaviour:
   height: 0.25
   message: Table
   zoomLevel: 20
+--- !u!114 &114646462424114484
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1450718105596570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f33a420829fad249b59aee86497d176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0.3
+  z: 0.15
+  height: 0.747
+  offset: 0

@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23123640393303002}
   - component: {fileID: 135904089138187124}
   - component: {fileID: 114626896386686264}
+  - component: {fileID: 114753878372304104}
   m_Layer: 0
   m_Name: pot
   m_TagString: Untagged
@@ -36,8 +37,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1625650549307928}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.432, y: 0, z: 18.991}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -99,6 +100,19 @@ MonoBehaviour:
   height: 0.25
   message: Pot
   zoomLevel: 20
+--- !u!114 &114753878372304104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1625650549307928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f33a420829fad249b59aee86497d176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  height: 0
+  offset: 0
 --- !u!135 &135904089138187124
 SphereCollider:
   m_ObjectHideFlags: 1
