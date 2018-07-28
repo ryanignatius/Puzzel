@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 65543642275642968}
   - component: {fileID: 114030904956320992}
   - component: {fileID: 114646462424114484}
+  - component: {fileID: 114329814346156140}
   m_Layer: 0
   m_Name: table
   m_TagString: Untagged
@@ -112,6 +113,21 @@ MonoBehaviour:
   height: 0.25
   message: Table
   zoomLevel: 20
+--- !u!114 &114329814346156140
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1450718105596570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
 --- !u!114 &114646462424114484
 MonoBehaviour:
   m_ObjectHideFlags: 1

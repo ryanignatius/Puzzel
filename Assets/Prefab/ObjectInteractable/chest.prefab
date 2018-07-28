@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4854658429326976}
   - component: {fileID: 33944057603607036}
   - component: {fileID: 23503129991515232}
+  - component: {fileID: 114615674006784702}
   m_Layer: 0
   m_Name: lid_B
   m_TagString: Untagged
@@ -58,6 +59,7 @@ GameObject:
   - component: {fileID: 65362860801852600}
   - component: {fileID: 114842229321366444}
   - component: {fileID: 114813241054771302}
+  - component: {fileID: 114251880615130568}
   m_Layer: 0
   m_Name: chest
   m_TagString: Untagged
@@ -241,6 +243,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.25000003, y: 0.099999994, z: 0.20000002}
   m_Center: {x: 0, y: 0.049999997, z: 0}
+--- !u!114 &114251880615130568
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1859174699979090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
+--- !u!114 &114615674006784702
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1164181203288610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
 --- !u!114 &114813241054771302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -252,6 +284,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f33a420829fad249b59aee86497d176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  x: 0
+  z: 0
   height: 0
   offset: 0
 --- !u!114 &114842229321366444

@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 135129833968604762}
   - component: {fileID: 114645981901550866}
   - component: {fileID: 114764549713209902}
+  - component: {fileID: 114976830479196834}
   m_Layer: 0
   m_Name: pot_B
   m_TagString: Untagged
@@ -111,8 +112,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f33a420829fad249b59aee86497d176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  x: 0
+  z: 0
   height: 0
   offset: 0
+--- !u!114 &114976830479196834
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1770906579995930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
 --- !u!135 &135129833968604762
 SphereCollider:
   m_ObjectHideFlags: 1

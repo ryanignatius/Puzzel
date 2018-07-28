@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 135293209345487896}
   - component: {fileID: 114526310300239370}
   - component: {fileID: 114445588860994010}
+  - component: {fileID: 114218012379172622}
   m_Layer: 0
   m_Name: skull
   m_TagString: Untagged
@@ -85,6 +86,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1374040172290076}
   m_Mesh: {fileID: 4300000, guid: 481b635407ffb1f4c9f82ae6f468e377, type: 3}
+--- !u!114 &114218012379172622
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1374040172290076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
 --- !u!114 &114445588860994010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -96,6 +112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f33a420829fad249b59aee86497d176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  x: 0
+  z: 0
   height: 0
   offset: 0.105
 --- !u!114 &114526310300239370

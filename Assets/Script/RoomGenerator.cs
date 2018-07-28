@@ -134,6 +134,10 @@ public class RoomGenerator : MonoBehaviour {
         la.SetParent(tab);
 
         tab.eulerAngles = new Vector3(tab.eulerAngles.x, roty, tab.eulerAngles.z);
+
+        ch.SetParent(tab.transform.parent);
+        sk.SetParent(tab.transform.parent);
+        la.SetParent(tab.transform.parent);
     }
 
     private float Rand()
