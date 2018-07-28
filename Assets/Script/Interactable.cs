@@ -18,6 +18,7 @@ public abstract class Interactable : MonoBehaviour {
 
     protected static GameObject terminalObject;
     protected static Terminal terminal;
+    protected cakeslice.Outline[] outlines;
 
     protected virtual void Start()
     {
@@ -34,6 +35,8 @@ public abstract class Interactable : MonoBehaviour {
                 terminalObject.SetActive(false);
             }
         }
+        outlines = GetComponentsInChildren<cakeslice.Outline>();
+        HideOutlines();
     }
 
     protected virtual void Update()
@@ -52,6 +55,7 @@ public abstract class Interactable : MonoBehaviour {
         if (!isStartInteract)
         {
             isStartInteract = true;
+            ShowOutlines();
             if (useZoom)
             {
                 float t = cam.ZoomTo(target, zoomLevel);
@@ -70,6 +74,7 @@ public abstract class Interactable : MonoBehaviour {
         {
             isInteract = false;
             CloseTerminal();
+            HideOutlines();
             if (useZoom)
             {
                 float t = cam.CancelZoom();
@@ -109,6 +114,22 @@ public abstract class Interactable : MonoBehaviour {
         if (terminalObject != null)
         {
             terminalObject.SetActive(false);
+        }
+    }
+
+    private void ShowOutlines()
+    {
+        foreach (cakeslice.Outline outline in outlines)
+        {
+            outline.enabled = true;
+        }
+    }
+
+    private void HideOutlines()
+    {
+        foreach (cakeslice.Outline outline in outlines)
+        {
+            outline.enabled = false;
         }
     }
 }
