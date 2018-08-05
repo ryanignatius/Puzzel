@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 23740064926173356}
   - component: {fileID: 65620854594164870}
   - component: {fileID: 114836675338802184}
+  - component: {fileID: 114934835621835956}
+  - component: {fileID: 114416791853066806}
   m_Layer: 0
   m_Name: lantern
   m_TagString: Untagged
@@ -36,8 +38,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1207985779257368}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.847, y: 0.748, z: 18.81}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -96,6 +98,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.16600262, y: 0.34595, z: 0.13775}
   m_Center: {x: -0.014126308, y: 0.172975, z: 0}
+--- !u!114 &114416791853066806
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1207985779257368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
 --- !u!114 &114836675338802184
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111,3 +128,18 @@ MonoBehaviour:
   height: 0.2
   message: Lantern
   zoomLevel: 20
+--- !u!114 &114934835621835956
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1207985779257368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f33a420829fad249b59aee86497d176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  z: 0
+  height: 0
+  offset: 0

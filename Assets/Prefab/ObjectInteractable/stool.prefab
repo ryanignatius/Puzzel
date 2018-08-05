@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 23633935711421036}
   - component: {fileID: 136869867779131786}
   - component: {fileID: 114889716538052094}
+  - component: {fileID: 114634267210068774}
+  - component: {fileID: 114346750298724270}
   m_Layer: 0
   m_Name: stool
   m_TagString: Untagged
@@ -36,13 +38,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1017723013591958}
-  m_LocalRotation: {x: -0, y: -0.29424825, z: -0, w: 0.95572907}
-  m_LocalPosition: {x: 7.865, y: 0, z: 18.66}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -34.225002, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23633935711421036
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -84,6 +86,36 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1017723013591958}
   m_Mesh: {fileID: 4300000, guid: d2260e8cc0733da40abaea2112e65d9c, type: 3}
+--- !u!114 &114346750298724270
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1017723013591958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
+--- !u!114 &114634267210068774
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1017723013591958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f33a420829fad249b59aee86497d176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  z: 0
+  height: 0
+  offset: 0
 --- !u!114 &114889716538052094
 MonoBehaviour:
   m_ObjectHideFlags: 1
