@@ -30,7 +30,7 @@ public class ScreenTransition : MonoBehaviour {
             Camera camera = GetComponent<Camera>();
             Texture2D texture = new Texture2D(1, 1);
             float alpha = (state == FadeState.IN) ? fadeTime - fadeAlpha : fadeAlpha;
-            texture.SetPixel(0, 0, new Color(1, 1, 1, alpha));
+            texture.SetPixel(0, 0, new Color(0, 0, 0, alpha));
             texture.Apply();
             GUI.DrawTexture(new Rect(0, 0, camera.pixelWidth, camera.pixelHeight), texture);
             fadeAlpha += Time.deltaTime * 0.5f;
@@ -63,4 +63,8 @@ public class ScreenTransition : MonoBehaviour {
         }
     }
 
+    public void setLevel(int level)
+    {
+        Password.SetLevel(level);
+    }
 }

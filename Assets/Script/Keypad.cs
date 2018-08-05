@@ -6,15 +6,15 @@ public class Keypad : MonoBehaviour
     private string input;
     private bool doorOpen;
     private bool keypadScreen;
-    private FirstPersonCamera firstPersonCamera;
+    private bool isShow;
     private Collider door;
 
     void Start()
     {
-        firstPersonCamera = GameObject.Find("Main Camera").GetComponent<FirstPersonCamera>();
         doorOpen = false;
         keypadScreen = false;
         input = "";
+        isShow = false;
     }
 
     void OnGUI()
@@ -78,9 +78,9 @@ public class Keypad : MonoBehaviour
                     input = input + "0";
                 }
 
-                if (GUI.Button(new Rect(5, 350, 100, 100), "Exit"))
+                if (GUI.Button(new Rect(5, 350, 100, 100), "Clear"))
                 {
-                    Reset();
+                    input = "";
                 }
 
                 if (GUI.Button(new Rect(215, 350, 100, 100), "Submit"))
@@ -102,21 +102,21 @@ public class Keypad : MonoBehaviour
         }
     }
 
-    private void Reset()
+    public void Reset()
     {
         keypadScreen = false;
         input = "";
-        firstPersonCamera.enabled = true;
+        isShow = false;
     }
 
     public void Show(Collider _door)
     {
-        if (!keypadScreen)
+        if (!isShow)
         {
+            isShow = true;
             door = _door;
             keypadScreen = true;
             input = "";
-            firstPersonCamera.enabled = false;
         }
     }
 }
