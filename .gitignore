@@ -70,3 +70,9 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# Oculus go vr related
+Assets/Oculus
+Assets/Oculus.meta
+Assets/Plugins/Android
+Assets/Plugins/Android.meta
